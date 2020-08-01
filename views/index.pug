@@ -1,0 +1,10 @@
+extends layout
+
+block content
+    img.center#stan(src='/images/moose-green.png')
+    h1#title UofTHacks VIII
+    h2 February 19-21 2021
+    form(action='/email_sign_up', method='POST')
+        input#email.box(type='email', name='email', placeholder='Enter your email to get updates', required='')
+        input#submitEmail(type='submit', name='submitEmail', value='Sign me up!')
+    p#successIndicator
