@@ -4,7 +4,8 @@ html
         title UofTHacks VIII
         link(rel='stylesheet', href='/stylesheets/style.css')
         script(src='/javascripts/script.js')
+        meta(name='format-detection', content='telephone=no')
     body
-        canvas#matrix(width=2000, height=1000)
-        div.center
+        canvas#matrix
+        div.center#content
             block content

@@ -1,6 +1,7 @@
 body {
     background-color: #000000;
-    color: #1ee113;
+    /* color: #1ee113; */
+    color: #ffffff;
     font-size: 16px;
     font-family: 'Courier New', Courier, monospace;
     background-image: url('/images/skyline-green.png');
@@ -8,6 +9,7 @@ body {
     background-position: left bottom;
     background-repeat: no-repeat;
     background-size: 100%;
+    white-space: nowrap;
 }
 
 h1 {
@@ -23,10 +25,21 @@ input {
     border-radius: 15px;
 }
 
+.horizontal-center {
+    display: block;
+    position: absolute;
+    left: 50%;
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
 .center {
     display: block;
-    margin: 0px auto;
-    width: 25%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
 
 canvas#matrix {
