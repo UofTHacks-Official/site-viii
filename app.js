@@ -7,7 +7,9 @@ var favicon = require('serve-favicon');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 
-mongoose.connect('mongodb+srv://uofthacks:gq8hUmx5yt6OHGov@cluster0-hzrwe.mongodb.net/uofthacks_viii?retryWrites=true&w=majority')
+mongoose.set('useNewUrlParser', true);
+mongoose.set('useUnifiedTopology', true);
+mongoose.connect('mongodb+srv://uofthacks:gq8hUmx5yt6OHGov@cluster0-hzrwe.mongodb.net/uofthacks_viii?retryWrites=true&w=majority');
 var db = mongoose.connection;
 db.on('error', console.log.bind(console, 'connection error'));
 db.once('open', function(callback) {
