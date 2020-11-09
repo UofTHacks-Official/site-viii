@@ -17,7 +17,6 @@ db.once('open', function(callback) {
 })
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
 
 var app = express();
 
@@ -37,7 +36,6 @@ app.use(bodyParser.urlencoded({
 app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
 
 app.post('/email_sign_up', function(req, res) {
     var data = {
