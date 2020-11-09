@@ -6,9 +6,9 @@ var router = express.Router();
 /* POST git pull (fast-forward only) from Github webhook. */
 router.post('/', function(req, res) {
   // Get sent hash from header
-  const req_hash = req.header('X-Hub-Signature-256').substring(7);
-  // Get local_hash of webhook secret (environment variable)
-  const local_hash = crypto.createHash('sha256').update(process.env.WEBHOOK_SECRET).digest('hex');
+  const req_hash = req.header('X-Hub-Signature-256');
+  // Get local hash of webhook secret (environment variable)
+  const local_hash = 'sha256=' + crypto.createHmac('sha256', process.env.WEBHOOK_SECRET).update(JSON.stringify(req.body)).digest('hex');
   if (crypto.timingSafeEqual(Buffer.from(req_hash), Buffer.from(local_hash))) {
     // Attempt to pull from remote
     child_process.exec('git pull --ff-only', (err, stdout, stderr) => {
