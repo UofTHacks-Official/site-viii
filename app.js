@@ -17,6 +17,7 @@ db.once('open', function(callback) {
 })
 
 var indexRouter = require('./routes/index');
+var pullRouter = require('./routes/pull');
 
 var app = express();
 
@@ -35,6 +36,7 @@ app.use(bodyParser.urlencoded({
 }))
 app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
 
+app.use('/pull', pullRouter);
 app.use('/', indexRouter);
 
 app.post('/email_sign_up', function(req, res) {
