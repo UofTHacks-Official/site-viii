@@ -1,2 +1,11 @@
 # placeholder-site
 Placeholder site for UofTHacks VIII
+
+## Installation
+Prequisite: npm
+Clone the repository and change to the directory you cloned it into.
+Install required npm packages: `npm install`
+Start the server (plain): `npm start`
+Start the server (managed by pm2): `pm2 start npm --name "placeholder-site" --watch -- start`
+
+Server runs on localhost:$PORT (3000 by default)
