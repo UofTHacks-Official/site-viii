@@ -82,6 +82,5 @@ window.onload = function() {
     // Translate moose
     var text = document.getElementById('welcome-text');
     var moose = document.getElementById('stan');
-    moose.style.mstransform = 'translate(-50%, ' + (-2 * text.offsetHeight).toString() + 'px)';
-    moose.style.transform = 'translate(-50%, ' + (-2 * text.offsetHeight).toString() + 'px)';
+    moose.style.bottom = text.offsetHeight.toString() + 'px';
 }

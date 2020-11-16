@@ -25,6 +25,10 @@ input {
     border-radius: 15px;
 }
 
+a {
+    color: #00ffff;
+}
+
 .horizontal-center {
     display: block;
     position: absolute;
@@ -51,8 +55,11 @@ canvas#matrix {
     z-index: -1;
 }
 
+div#welcome-text {
+    padding: 10px;
+}
+
 img#stan {
-    padding-top: 25%;
     width: 50%;
 }
 
