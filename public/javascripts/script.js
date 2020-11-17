@@ -1,4 +1,4 @@
-window.onload = function() {
+function code_rain() {
     var canvas = document.getElementById('matrix');
     const ctx = canvas.getContext('2d');
     const w = screen.width;
@@ -18,7 +18,8 @@ window.onload = function() {
             chars[i][j] = [32, 255];
         }
     }
-    var rain = Array(10); // Array(Math.floor(cols / 10));
+
+    var rain = Array(5 * Math.floor(Math.log(cols)));
     for (var i = 0; i < rain.length; i++) {
         rain[i] = [Math.round(Math.random() * cols), Math.round(-1 * Math.random() * rows)];
     }
@@ -66,7 +67,15 @@ window.onload = function() {
         }
     }
 
-    setInterval(drawGrid, 100);
+    return setInterval(drawGrid, 100);
+}
+
+function setup() {
+    var interval = code_rain();
+    window.onresize = function() {
+        clearInterval(interval);
+        interval = code_rain();
+    }
 
     // Show status of database request
     if (window.location.hash) {
@@ -82,6 +91,7 @@ window.onload = function() {
     // Translate moose
     var text = document.getElementById('welcome-text');
     var moose = document.getElementById('stan');
-    moose.style.mstransform = 'translate(-50%, ' + (-2 * text.offsetHeight).toString() + 'px)';
-    moose.style.transform = 'translate(-50%, ' + (-2 * text.offsetHeight).toString() + 'px)';
+    moose.style.bottom = text.offsetHeight.toString() + 'px';
 }
+
+window.onload = setup;
