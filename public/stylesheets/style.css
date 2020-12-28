@@ -20,11 +20,6 @@ h2 {
     font-size: 24px;
 }
 
-input {
-    height: 30px;
-    border-radius: 15px;
-}
-
 a {
     color: #00ffff;
 }
@@ -68,14 +63,14 @@ h1#title {
     margin-bottom: 0px;
 }
 
-input#email {
-    width: 300px;
-    margin-right: 30px;
-}
-
-input#submitEmail {
-    background-color: #44a0ff;
+button#apply {
+    background-color: #429e31;
     color: #ffffff;
+    border-radius: 15px;
+    height: 60px;
+    width: 100%;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 36px;
 }
 
 p#successIndicator {

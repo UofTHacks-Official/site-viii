@@ -3,10 +3,9 @@ extends layout
 block content
     img.horizontal-center#stan(src='/images/moose-white.png')
     div#welcome-text
-      h1#title UofTHacks VIII
-      h2 February 19-21, 2021
-      form(action='/email_sign_up', method='POST')
-          input#email.box(type='email', name='email', placeholder='Enter your email to get updates', required='')
-          input#submitEmail(type='submit', name='submitEmail', value='Sign me up!')
-      p#successIndicator
-      p UofTHacks follows the <a href='https://static.mlh.io/docs/mlh-code-of-conduct.pdf'>MLH Code of Conduct</a>.
+        h1#title UofTHacks VIII
+        h2 February 19-21, 2021
+        a(href='https://uofthacks2020.typeform.com/to/K8bQ5X5L')
+            button#apply(type='button') Apply now!
+        p#successIndicator
+        p UofTHacks follows the <a href='https://static.mlh.io/docs/mlh-code-of-conduct.pdf'>MLH Code of Conduct</a>.
