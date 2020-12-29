@@ -66,14 +66,21 @@ a#typeform-link {
     margin-bottom: 8px;
 }
 
-.info {
+.panel {
     background-color: #429e31;
-    padding: 16px 16px 16px calc(10% + 64px);
     margin-right: 10%;
+}
+
+.info {
+    padding: 16px 16px 16px calc(10% + 64px);
 }
 
 .info p {
     margin: 0px;
+}
+
+.sponsors {
+    padding: 32px 0px;
 }
 
 canvas#matrix {
@@ -200,10 +207,6 @@ div#footer a {
 
 div#faq-box {
     display: flex;
-}
-
-img.white {
-    background-color: #ffffff;
 }
 
 img#stan {
