@@ -145,6 +145,7 @@ div.row {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
 }
 
 div.row > div {
