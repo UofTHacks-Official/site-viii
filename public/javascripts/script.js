@@ -70,11 +70,18 @@ function code_rain() {
     return setInterval(drawGrid, 100);
 }
 
+function move_stan() {
+    var text = document.getElementById('welcome-text');
+    var moose = document.getElementById('stan');
+    moose.style.bottom = text.offsetHeight.toString() + 'px';
+}
+
 function setup() {
     var interval = code_rain();
     window.onresize = function() {
         clearInterval(interval);
         interval = code_rain();
+        move_stan();
     }
 
     // Show status of database request
@@ -89,9 +96,18 @@ function setup() {
     }
 
     // Translate moose
-    var text = document.getElementById('welcome-text');
-    var moose = document.getElementById('stan');
-    moose.style.bottom = text.offsetHeight.toString() + 'px';
+    move_stan();
 }
 
 window.onload = setup;
+
+function updateNavbar() {
+    var navbar = document.getElementById('navbar');
+    if (window.pageYOffset > 56) {
+        navbar.classList.add('black');
+    } else {
+        navbar.classList.remove('black');
+    }
+}
+
+window.onscroll = updateNavbar;
