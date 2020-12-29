@@ -101,6 +101,15 @@ function setup() {
 
 window.onload = setup;
 
+function updateBackground() {
+    var background = document.getElementById('bg');
+    if (window.pageYOffset > window.innerHeight / 2) {
+        background.classList.add('transparent');
+    } else {
+        background.classList.remove('transparent');
+    }
+}
+
 function updateNavbar() {
     var navbar = document.getElementById('navbar');
     if (window.pageYOffset > 56) {
@@ -110,4 +119,5 @@ function updateNavbar() {
     }
 }
 
-window.onscroll = updateNavbar;
+window.addEventListener('scroll', updateBackground);
+window.addEventListener('scroll', updateNavbar);

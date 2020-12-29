@@ -11,11 +11,6 @@ body {
     color: #ffffff;
     font-size: 24px;
     font-family: 'Courier New', Courier, monospace;
-    background-image: url('/images/skyline-green.png');
-    background-attachment: fixed;
-    background-position: left bottom;
-    background-repeat: no-repeat;
-    background-size: 100%;
 }
 
 h1 {
@@ -92,6 +87,25 @@ canvas#matrix {
     z-index: -1;
 }
 
+div#bg {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: url('/images/skyline-green.png');
+    background-attachment: fixed;
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    transition: all 0.25s;
+}
+
+div.transparent#bg {
+    opacity: 0.25;
+}
+
 div#navbar {
     position: fixed;
     top: 0px;
@@ -101,7 +115,7 @@ div#navbar {
     flex-wrap: wrap;
     align-items: center;
     background-color: transparent;
-    transition: all 0.3s;
+    transition: all 0.25s;
 }
 
 div.black#navbar {
@@ -138,7 +152,7 @@ div.row > div {
 }
 
 div.row a img {
-    transition: all 0.3s;
+    transition: all 0.25s;
 }
 
 div.row a:hover img {
