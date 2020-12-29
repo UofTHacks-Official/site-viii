@@ -40,9 +40,7 @@ a#typeform-link {
 
 .horizontal-center {
     display: block;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    margin: 0px auto;
 }
 
 .center {
@@ -225,7 +223,7 @@ div#faq-box {
 }
 
 img#stan {
-    width: 50%;
+    width: 200px;
 }
 
 .title {

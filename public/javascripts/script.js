@@ -70,18 +70,12 @@ function code_rain() {
     return setInterval(drawGrid, 100);
 }
 
-function move_stan() {
-    var text = document.getElementById('welcome-text');
-    var moose = document.getElementById('stan');
-    moose.style.bottom = text.offsetHeight.toString() + 'px';
-}
-
 function setup() {
+    // Reset code rain
     var interval = code_rain();
     window.onresize = function() {
         clearInterval(interval);
         interval = code_rain();
-        move_stan();
     }
 
     // Show status of database request
@@ -94,9 +88,6 @@ function setup() {
             document.getElementById('successIndicator').innerHTML = 'An error occurred; please try again later.';
         }
     }
-
-    // Translate moose
-    move_stan();
 }
 
 window.onload = setup;
