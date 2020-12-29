@@ -1,8 +1,8 @@
 function code_rain() {
     var canvas = document.getElementById('matrix');
     const ctx = canvas.getContext('2d');
-    const w = screen.width;
-    const h = screen.height;
+    const w = window.outerWidth;
+    const h = window.outerHeight;
     canvas.width = w;
     canvas.height = h;
     const charWidth = 20;
