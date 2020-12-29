@@ -63,10 +63,10 @@ a#typeform-link {
 
 .panel {
     background-color: #429e31;
-    margin-right: 10%;
 }
 
 .info {
+    margin-right: 10%;
     padding: 16px 16px 16px calc(10% + 64px);
 }
 
