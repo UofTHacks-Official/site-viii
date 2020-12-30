@@ -94,10 +94,13 @@ window.onload = setup;
 
 function updateBackground() {
     var background = document.getElementById('bg');
+    var matrix = document.getElementById('matrix');
     if (window.pageYOffset > 100) {
         background.classList.add('transparent');
+        matrix.classList.add('transparent');
     } else {
         background.classList.remove('transparent');
+        matrix.classList.remove('transparent');
     }
 }
 

@@ -55,6 +55,10 @@ p {
     transform: translate(-50%, -50%);
 }
 
+.transparent {
+    opacity: 0.25;
+}
+
 .section {
     padding: 0% 10%;
 }
@@ -102,10 +106,6 @@ div#bg {
     background-repeat: no-repeat;
     background-size: 100%;
     transition: all 0.25s;
-}
-
-div.transparent#bg {
-    opacity: 0.25;
 }
 
 div#navbar {
