@@ -146,6 +146,10 @@ div.row {
     align-items: center;
 }
 
+div.row.top {
+    align-items: stretch;
+}
+
 div.row > div {
     margin: 0px 32px;
 }
