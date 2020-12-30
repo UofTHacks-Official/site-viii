@@ -65,6 +65,7 @@ p {
 
 .section h2 {
     margin-bottom: 8px;
+    color: #429e31;
 }
 
 .panel {
@@ -191,10 +192,6 @@ div.level5 * {
     max-height: 150px;
 }
 
-div.sponsors img {
-    min-width: 150px;
-}
-
 div.faq-item {
     width: 500px;
 }
@@ -254,6 +251,7 @@ h3.title {
 
 h3.faq-question {
     margin-bottom: 8px;
+    color: #429e31;
 }
 
 div#apply {
