@@ -38,6 +38,10 @@ a#typeform-link {
     text-decoration: none;
 }
 
+p {
+    font-weight: bold;
+}
+
 .horizontal-center {
     display: block;
     margin: 0px auto;
