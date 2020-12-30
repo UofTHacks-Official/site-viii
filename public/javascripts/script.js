@@ -94,7 +94,7 @@ window.onload = setup;
 
 function updateBackground() {
     var background = document.getElementById('bg');
-    if (window.pageYOffset > window.innerHeight / 2) {
+    if (window.pageYOffset > 100) {
         background.classList.add('transparent');
     } else {
         background.classList.remove('transparent');
