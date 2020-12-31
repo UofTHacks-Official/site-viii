@@ -1,8 +1,8 @@
 function code_rain() {
     var canvas = document.getElementById('matrix');
     const ctx = canvas.getContext('2d');
-    const w = screen.width;
-    const h = screen.height;
+    const w = window.outerWidth;
+    const h = window.outerHeight;
     canvas.width = w;
     canvas.height = h;
     const charWidth = 20;
@@ -71,6 +71,7 @@ function code_rain() {
 }
 
 function setup() {
+    // Reset code rain
     var interval = code_rain();
     window.onresize = function() {
         clearInterval(interval);
@@ -87,11 +88,30 @@ function setup() {
             document.getElementById('successIndicator').innerHTML = 'An error occurred; please try again later.';
         }
     }
-
-    // Translate moose
-    var text = document.getElementById('welcome-text');
-    var moose = document.getElementById('stan');
-    moose.style.bottom = text.offsetHeight.toString() + 'px';
 }
 
 window.onload = setup;
+
+function updateBackground() {
+    var background = document.getElementById('bg');
+    var matrix = document.getElementById('matrix');
+    if (window.pageYOffset > 100) {
+        background.classList.add('transparent');
+        matrix.classList.add('transparent');
+    } else {
+        background.classList.remove('transparent');
+        matrix.classList.remove('transparent');
+    }
+}
+
+function updateNavbar() {
+    var navbar = document.getElementById('navbar');
+    if (window.pageYOffset > 56) {
+        navbar.classList.add('black');
+    } else {
+        navbar.classList.remove('black');
+    }
+}
+
+window.addEventListener('scroll', updateBackground);
+window.addEventListener('scroll', updateNavbar);
