@@ -8,3 +8,6 @@ updates:
     schedule:
       interval: "daily"
     target-branch: "develop"
+    ignore:
+      - dependency-name: "mongoose"
+        versions: ["5.x"]
