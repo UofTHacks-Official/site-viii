@@ -270,11 +270,11 @@ h3.faq-question {
 }
 
 .button div p {
-    margin: 0px;
+    margin: 0px 24px;
 }
 
 div#apply {
-    font-size: 36px;
+    font-size: 24px;
     margin-bottom: 16px;
 }
 
