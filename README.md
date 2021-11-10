@@ -1,5 +1,5 @@
-# placeholder-site
-Placeholder site for UofTHacks VIII
+# UofTHacks VIII
+The Official Site Repo for UofTHacks VIII
 
 ## Installation
 Prequisite: npm
