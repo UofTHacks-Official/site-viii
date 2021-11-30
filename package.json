@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www"
-    "pm2-start" : "NODE_PORT=2020 pm2 start npm --name "placeholder-site" --watch -- start"
+    "pm2-start" : "NODE_PORT=2020 pm2 start npm --name 'uofthacks-viii' --watch -- start"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.2",
